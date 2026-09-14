@@ -1,31 +1,31 @@
 import math
 
 
-def get_player_pos():
+def get_player_pos() -> tuple[float, float, float]:
     while True:
         try:
             coordinates = input(
                 "Enter new coordinates as floats in format 'x,y,z': "
                 )
-            x, y, z = coordinates.split(",")
-            x = float(x)
-            y = float(y)
-            z = float(z)
+            c1, c2, c3 = coordinates.split(",")
+            x = float(c1)
+            y = float(c2)
+            z = float(c3)
             return (x, y, z)
         except ValueError:
             print("Invalid syntax")
 
 
-def get_second_coords():
+def get_second_coords() -> tuple[float, float, float]:
     while True:
         try:
             coordinates = input(
                 "Enter new coordinates as floats in format 'x,y,z': "
                 )
-            x, y, z = coordinates.split(",")
-            x = float(x)
-            y = float(y)
-            z = float(z)
+            c1, c2, c3 = coordinates.split(",")
+            x = float(c1)
+            y = float(c2)
+            z = float(c3)
             return (x, y, z)
         except ValueError as e:
             print(f"Error on parameter: {e}")

@@ -2,10 +2,10 @@ import sys
 
 if __name__ == "__main__":
     print("=== Player Score Analytics ===")
-    scores: list[int] = []
+    scores: list[float] = []
     for args in range(1, len(sys.argv)):
         try:
-            score: float = float(sys.argv[args])
+            score = float(sys.argv[args])
             scores.append(score)
         except ValueError:
             print(f"Invalid parameter: {sys.argv[args]}")
@@ -22,7 +22,7 @@ if __name__ == "__main__":
 
         print(f"Scores processed: {scores}")
         print(f"Total players: {total_players}")
-        print(f"Total score: {round(total_score), 2}")
+        print(f"Total score: {round(total_score, 2)}")
         print(f"Average score: {round(average_score, 2)}")
         print(f"High score: {high_score}")
         print(f"Low score: {low_score}")
