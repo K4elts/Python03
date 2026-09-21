@@ -10,7 +10,7 @@ if __name__ == "__main__":
         except ValueError:
             print(f"Invalid parameter: {sys.argv[args]}")
     if not scores:
-        print(f"No scores provided. Usage python3 {sys.argv[0]} <score1>"
+        print(f"No scores provided. Usage: python3 {sys.argv[0]} <score1>"
               " <score2> ...")
     else:
         total_players: int = len(scores)

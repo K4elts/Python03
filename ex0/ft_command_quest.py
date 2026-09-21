@@ -6,6 +6,7 @@ if __name__ == "__main__":
     if len(sys.argv) == 1:
         print("No arguments provided!")
     else:
+        print(f"Arguments received: {len(sys.argv) - 1}")
         for arg in range(1, len(sys.argv)):
             print(f"Argument {arg}: {sys.argv[arg]}")
     print(f"Total arguments: {len(sys.argv)}")

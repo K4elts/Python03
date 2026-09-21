@@ -1,6 +1,6 @@
 import random
 
-achievements_set = {"Crafting Genius", "Stategist", "World Savior",
+achievements_set = {"Crafting Genius", "Strategist", "World Savior",
                     "Speed Runner", "Survivor", "Master Explorer",
                     "Treasure Hunter", "Unstoppable", "First Steps",
                     "Collector Supreme", "Untouchable", "Sharp Mind",
@@ -9,9 +9,8 @@ achievements_set = {"Crafting Genius", "Stategist", "World Savior",
 
 def gen_player_achievements(achievements_set: set[str]) -> set[str]:
     achievement_list = set(random.sample(
-                                    list(achievements_set),
-                                    random.randrange(1, len(achievements_set))
-                                    ))
+        list(achievements_set), random.randrange(1, len(achievements_set) + 1)
+    ))
     return achievement_list
 
 
@@ -24,14 +23,11 @@ if __name__ == "__main__":
     charlie = gen_player_achievements(achievements_set)
     print(f"Player Charlie: {charlie}")
     dylan = gen_player_achievements(achievements_set)
-    print(f"Player Dylan: {dylan}")
-    print()
+    print(f"Player Dylan: {dylan}\n")
     all_distinct = set.union(alice, bob, charlie, dylan)
-    print(f"All distinct achievements: {all_distinct}")
-    print()
+    print(f"All distinct achievements: {all_distinct}\n")
     common_achiev = set.intersection(alice, bob, charlie, dylan)
-    print(f"Common achievements: {common_achiev}")
-    print()
+    print(f"Common achievements: {common_achiev}\n")
     only_alice = alice.difference(bob, charlie, dylan)
     print(f"Only Alice has: {only_alice}")
     only_bob = bob.difference(alice, charlie, dylan)
@@ -39,8 +35,7 @@ if __name__ == "__main__":
     only_charlie = charlie.difference(alice, bob, dylan)
     print(f"Only Charlie has: {only_charlie}")
     only_dylan = dylan.difference(alice, bob, charlie)
-    print(f"Only Dylan has: {only_dylan}")
-    print()
+    print(f"Only Dylan has: {only_dylan}\n")
     missing_alice = set.difference(achievements_set, alice)
     print(f"Alice is missing: {missing_alice}")
     missing_bob = set.difference(achievements_set, bob)
